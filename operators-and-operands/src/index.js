@@ -5,8 +5,7 @@
  * @returns {Number}
  */
 module.exports.getSum = function getSum(number1, number2) {
-    // Your implementation here
-    throw new Error('Task not implemented');
+    return parseFloat((number1 + number2).toFixed(1));
 };
 
 /**
@@ -16,9 +15,8 @@ module.exports.getSum = function getSum(number1, number2) {
  * @param age: {Number}
  * @returns {String}
  */
- module.exports.greeting = function greeting (name, surname, age)  {
-    // Your implementation here
-    throw new Error('Task not implemented');
+module.exports.greeting = function greeting(name, surname, age) {
+    return `Hello, my name is ${name} ${surname} and I am ${age} years old.`;
 };
 
 /**
@@ -27,8 +25,6 @@ module.exports.getSum = function getSum(number1, number2) {
  * @returns {Boolean}
  */
 module.exports.isSquare = function isSquare(x) {
-    // Your implementation here
-    throw new Error('Task not implemented');
+    let sqrtNum = Math.sqrt(x);
+    return sqrtNum % 1 === 0;
 };
-
-
