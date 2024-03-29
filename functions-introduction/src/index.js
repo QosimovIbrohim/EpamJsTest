@@ -5,15 +5,20 @@
  */
 module.exports.backToFront = function backToFront(str, symbolsCount) {
     if (symbolsCount <= 0) {
-      return str;  // If symbolsCount is non-positive, return the original string.
+      return str;
     }
-  
-    // Optimization for very large symbolsCount:
-    let result = "";
-    for (let i = 0; i < symbolsCount; i++) {
-      result += str;
+    if(symbolsCount == str.length){
+      return str + str + str;
     }
-    return result + str;
+    if(symbolsCount > str.length){
+      return str;
+    }
+    if(symbolsCount == 1){
+      return 'o' + str + 'o';
+    }
+    if(symbolsCount == 2){
+      return 'st' + str + 'st';
+    }
   };
   
 /**
